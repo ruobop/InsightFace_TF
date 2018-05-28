@@ -15,10 +15,10 @@ from verification import ver_test
 
 def get_parser():
     parser = argparse.ArgumentParser(description='parameters to train net')
-    parser.add_argument('--net_depth', default=100, help='resnet depth, default is 50')
+    parser.add_argument('--net_depth', default=50, type=int, help='resnet depth, default is 50')
     parser.add_argument('--epoch', default=100000, help='epoch to train the network')
-    parser.add_argument('--batch_size', default=32, help='batch size to train network')
-    parser.add_argument('--lr_steps', default=[40000, 60000, 80000], help='learning rate to train network')
+    parser.add_argument('--batch_size', default=64, type=int, help='batch size to train network')
+    parser.add_argument('--lr_steps', default=[30000, 50000, 70000], help='learning rate to train network')
     parser.add_argument('--momentum', default=0.9, help='learning alg momentum')
     parser.add_argument('--weight_deacy', default=5e-4, help='learning alg momentum')
     # parser.add_argument('--eval_datasets', default=['lfw', 'cfp_ff', 'cfp_fp', 'agedb_30'], help='evluation datasets')
